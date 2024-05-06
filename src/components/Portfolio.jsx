@@ -1,6 +1,9 @@
 function Portfolio() {
   return (
-    <div className="bg-gradient-to-r from-[#273b1a] to-[#3b4c26]" id="portfolio">
+    <div
+      className="bg-gradient-to-r from-[#273b1a] to-[#3b4c26]"
+      id="portfolio"
+    >
       <div className="container p-3 mx-auto pt-20 ">
         <p className="text-[#c0d6bb] lg:text-2xl text-xl uppercase text-center">
           Portfolio
@@ -12,16 +15,32 @@ function Portfolio() {
         </span>
         <section className="grid md:grid-cols-3 grid-cols-1 gap-6 pb-16">
           <div className="md:col-span-2 ">
-            <img src="/assets/img1.png" alt="" />
+            <img src="/assets/LOGIN.PNG" alt="image1" />
           </div>
           <div className="flex flex-col gap-6 ">
-            <img src="/assets/img2.png" alt="" />
-            <img src="/assets/img3.jpg" alt="" />
+            <img src="/assets/arames4.png" alt="" />
+            <img src="/assets/arames2.png" alt="" />
           </div>
 
-          <img src="/assets/img4.png" alt="" />
-          <img src="/assets/img5.jpg" alt="" />
-          <img src="/assets/img6.jpg" alt="" />
+          <img src="/assets/arames.png" alt="" />
+          <img src="/assets/arames3.png" alt="" />
+          <img src="/assets/arames5.png" alt="" />
+
+          <img src="/assets/aicons1.PNG" alt="" />
+
+          <img src="/assets/aicons2.PNG" alt="" />
+          <img src="/assets/aicons3.PNG" alt="" />
+          <img src="/assets/aicons4.PNG" alt="" />
+          <div className="md:col-span-2 ">
+          <img src="/assets/project4.PNG" alt="1" />
+          </div>
+          <div className="md:col-span-2 ">
+          <img src="/assets/project3.PNG" alt="1" />
+          </div>
+         
+          <div className="flex flex-col gap-6 ">
+          <img src="/assets/project2.PNG" alt="2" />
+          </div>
         </section>
       </div>
     </div>

@@ -8,6 +8,10 @@ import { useState } from "react";
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+ const  handleDownloadClick=()=>{
+    window.open("/assets/Eya-Eloued-1.pdf");
+  }
+
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-r from-[#273b1a] to-[#3b4c26]">
       <div className="container mx-auto lg:flex flex-wrap items-center justify-between px-3">
@@ -49,7 +53,7 @@ function Navbar() {
               </li>
             </div>
             <div className="lg:w-1/3 flex items-center justify-end ">
-              <button className="rounded-full px-6 py-4 flex items-center text-white gap-2 border border-[#627f4e]">
+              <button className="rounded-full px-6 py-4 flex items-center text-white gap-2 border border-[#627f4e]" onClick={handleDownloadClick}>
                 <p>Download CV</p>
                 <FaDownload />
               </button>

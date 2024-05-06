@@ -1,6 +1,16 @@
 import { FaGithub, FaLinkedin, FaFacebookF } from "react-icons/fa";
 
 function Hero() {
+
+  const openLinkedin=()=> {
+    window.open("https://www.linkedin.com/in/eya-eloued-811388181/")
+  }
+  const openFacebook=()=>{
+    window.open("https://www.facebook.com/aya.youta.549/")
+  }
+  const openGithub=()=>{
+    window.open("https://github.com/elouedeya")
+  }
   return (
     <div className="bg-gradient-to-r from-[#273b1a] to-[#3b4c26] " id="hero">
       <div className="px-3 flex flex-col items-center relative">
@@ -8,9 +18,9 @@ function Hero() {
         <div className="lg:w-60 w-20 rounded-[560px] rounded-t-none border border-t-0 border-r-0 border-[#69835e] absolute z-20 opacity-30 left-0 h-60  lg:bottom-40 bottom-0"></div>
 
         <div className="flex flex-col gap-y-12 text-[#c3d9bd]  absolute lg:left-[20%] left-2 top-1/4">
-          <FaFacebookF className="rounded-xl border border-[#c3d9bd] p-1 text-3xl cursor-pointer" />
-          <FaLinkedin className="   p-1 text-3xl cursor-pointer" />
-          <FaGithub className="  p-1 text-3xl cursor-pointer" />
+          <FaFacebookF className="rounded-xl border border-[#c3d9bd] p-1 text-3xl cursor-pointer" onClick={openFacebook}/>
+          <FaLinkedin className="   p-1 text-3xl cursor-pointer" onClick={openLinkedin}/>
+          <FaGithub className="  p-1 text-3xl cursor-pointer" onClick={openGithub}/>
         </div>
         <div className="sm:w-[30rem] w-4/5 lg:h-[25rem] mt-24 rounded-[560px] rounded-b-none border border-b-0 border-r-0 border-[#69835e] relative z-20 ">
           <img
@@ -26,7 +36,7 @@ function Hero() {
               <img
                 className="lg:w-full w-1/2 h-12 absolute lg:-right-20 top-[25%]"
                 src="/assets/arrow-left.png"
-                alt=""
+                alt="ArrowLeft"
               />
             </button>
           </div>
