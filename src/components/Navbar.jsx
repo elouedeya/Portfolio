@@ -1,5 +1,3 @@
-
-
 import { FaDownload } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
@@ -8,15 +6,18 @@ import { useState } from "react";
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
- const  handleDownloadClick=()=>{
+  const handleDownloadClick = () => {
     window.open("/assets/Eya-Eloued-1.pdf");
-  }
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-r from-[#273b1a] to-[#3b4c26]">
       <div className="container mx-auto lg:flex flex-wrap items-center justify-between px-3">
         <div className="lg:w-1/4  sticky top-0 flex justify-between lg:static lg:justify-start h-[10vh] items-center">
-          <a href="#hero" className="font-medium tracking-wider transition-colors cursor-pointer">
+          <a
+            href="#hero"
+            className="font-medium tracking-wider transition-colors cursor-pointer"
+          >
             <button className="flex items-center gap-x-4 text-white">
               <FaWifi className="text-2xl" />
               <p className="text-2xl">Eya Eloued</p>
@@ -53,7 +54,10 @@ function Navbar() {
               </li>
             </div>
             <div className="lg:w-1/3 flex items-center justify-end ">
-              <button className="rounded-full px-6 py-4 flex items-center text-white gap-2 border border-[#627f4e]" onClick={handleDownloadClick}>
+              <button
+                className="rounded-full px-6 py-4 flex items-center text-white gap-2 border border-[#627f4e]"
+                onClick={handleDownloadClick}
+              >
                 <p>Download CV</p>
                 <FaDownload />
               </button>
@@ -64,6 +68,5 @@ function Navbar() {
     </nav>
   );
 }
-
 
 export default Navbar;
