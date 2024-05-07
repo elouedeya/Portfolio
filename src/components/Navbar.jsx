@@ -45,9 +45,9 @@ function Navbar() {
               <li className="py-2 text-white flex font-medium items-center leading-snug hover:opacity-40">
                 <a href="#portfolio">Portfolio</a>
               </li>
-              <li className="py-2 text-white flex font-medium items-center leading-snug hover:opacity-40">
+              {/* <li className="py-2 text-white flex font-medium items-center leading-snug hover:opacity-40">
                 <a href="#about">About</a>
-              </li>
+              </li> */}
               <li className="py-2 text-white flex font-medium items-center leading-snug hover:opacity-40">
                 <a href="#hire">Contact Me</a>
               </li>

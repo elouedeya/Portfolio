@@ -72,7 +72,7 @@ function Services() {
                 <div className="w-full lg:flex justify-between gap-8 lg:pt-24 ">
                         <span className="text-center">
                             <p className="lg:text-5xl bg-gradient-to-r from-[#bcffa4] to-[#f49872] text-transparent bg-clip-text font-medium lg:pt-0 pt-8">
-                                200+
+                                12+
                             </p>
                             <p className="text-[#93a98b] text-lg lg:pt-4 pt-2">
                                     Project Delivered  
@@ -80,28 +80,21 @@ function Services() {
                         </span>
                         <span className="text-center">
                             <p className="lg:text-5xl bg-gradient-to-r from-[#bcffa4] to-[#f49872] text-transparent bg-clip-text font-medium lg:pt-0 pt-8">
-                                200+
+                                2
                             </p>
                             <p className="text-[#93a98b] text-lg lg:pt-4 pt-2">
-                                    Project Delivered  
+                                    Project In Progress  
                             </p>
                         </span>
                         <span className="text-center">
                             <p className="lg:text-5xl bg-gradient-to-r from-[#bcffa4] to-[#f49872] text-transparent bg-clip-text font-medium lg:pt-0 pt-8">
-                                2+
+                                3+
                             </p>
                             <p className="text-[#93a98b] text-lg lg:pt-4 pt-2">
                                     Years of Experience
                             </p>
                         </span>
-                        <span className="text-center">
-                            <p className="lg:text-5xl bg-gradient-to-r from-[#bcffa4] to-[#f49872] text-transparent bg-clip-text font-medium lg:pt-0 pt-8">
-                                200+
-                            </p>
-                            <p className="text-[#93a98b] text-lg lg:pt-4 pt-2">
-                                    Project Delivered  
-                            </p>
-                        </span>
+                  
                 </div>
                 <div className="flex lg:justify-between justify-start lg:gap-0 gap-[50%] pt-12 xl:pl-[20%] lg:h-auto h-44">
                   <div className="lg:w-60 w-28 lg:h-40 rounded-[560px] rounded-b-none border border-b-0 border-[#4c613e] opacity-40"> 

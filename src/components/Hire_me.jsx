@@ -1,16 +1,42 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().min(3, 'Name must be at least 3 characters').required('Name is required'),
-  email: Yup.string().email('Invalid email').required('Email is required'),
-  message: Yup.string().min(5, 'Message must be at least 5 characters').required('Message is required'),
+  name: Yup.string()
+    .min(3, "Name must be at least 3 characters")
+    .required("Name is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  message: Yup.string()
+    .min(5, "Message must be at least 5 characters")
+    .required("Message is required"),
 });
 
-
 const Hire_me = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("portfolio", "template_jdlp244", form.current, {
+        publicKey: "Hcs60HmzfKoh2sRJU",
+      })
+      .then(
+        () => {
+          alert("SUCESS");
+          e.target.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
-    <div className="bg-gradient-to-b from-[#273b1a] to-[#3b4c26] h-full relative " id='hire'>
+    <div
+      className="bg-gradient-to-b from-[#273b1a] to-[#3b4c26] h-full relative "
+      id="hire"
+    >
       <div className="px-3 pt-20 lg:flex items-end justify-between gap-8 container mx-auto">
         <div className="lg:w-2/3 ">
           <p className="text-[#c0d6bb] lg:text-2xl text-xl uppercase ">
@@ -31,19 +57,22 @@ const Hire_me = () => {
           </div>
           <Formik
             initialValues={{
-              name: '',
-              email: '',
-              message: '',
+              name: "",
+              email: "",
+              message: "",
             }}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting }) => {
-            
               console.log(values);
               setSubmitting(false);
             }}
           >
             {({ isSubmitting }) => (
-              <Form className="lg:w-11/12 flex flex-col lg:gap-6 gap-3 text-white lg:mt-0 mt-12">
+              <Form
+                ref={form}
+                className="lg:w-11/12 flex flex-col lg:gap-6 gap-3 text-white lg:mt-0 mt-12"
+                onSubmit={sendEmail}
+              >
                 <div className="flex lg:gap-6 gap-3 w-full ">
                   <label htmlFor="name" className="w-full ">
                     <Field
@@ -52,7 +81,11 @@ const Hire_me = () => {
                       placeholder="Name"
                       className="bg-[#213516] w-full px-4 h-16 outline-none "
                     />
-                    <ErrorMessage name="name" component="div" className="text-red-500" />
+                    <ErrorMessage
+                      name="name"
+                      component="div"
+                      className="text-red-500"
+                    />
                   </label>
                   <label htmlFor="email" className="w-full ">
                     <Field
@@ -61,7 +94,11 @@ const Hire_me = () => {
                       placeholder="Email"
                       className="bg-[#213516] w-full px-4 h-16 outline-none "
                     />
-                    <ErrorMessage name="email" component="div" className="text-red-500" />
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className="text-red-500"
+                    />
                   </label>
                 </div>
                 <label htmlFor="message" className="w-full ">
@@ -69,9 +106,13 @@ const Hire_me = () => {
                     as="textarea"
                     name="message"
                     placeholder="Message..."
-                    className="bg-[#213516] w-full px-4 h-140 outline-none "
+                    className="bg-[#213516] w-full px-4 h-140 outline-none max-h-[120px] "
                   />
-                  <ErrorMessage name="message" component="div" className="text-red-500" />
+                  <ErrorMessage
+                    name="message"
+                    component="div"
+                    className="text-red-500"
+                  />
                 </label>
                 <div className="pt-4 flex justify-end h-40">
                   <div className="bg-gradient-to-b from-[#3f5125] to-[#364823] rounded-full rounded-b-none lg:w-40 w-32 lg:h-20 h-16 lg:p-8 p-6 ">
